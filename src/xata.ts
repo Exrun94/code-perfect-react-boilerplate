@@ -48,6 +48,8 @@ const DatabaseClient = buildClient();
 const defaultOptions = {
   databaseURL:
     'https://Georgi-s-workspace-p4a5rb.eu-west-1.xata.sh/db/Playtest',
+  enableBrowser: true,
+  apiKey: import.meta.env.VITE_XATA_API_KEY,
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
@@ -64,3 +66,5 @@ export const getXataClient = () => {
   instance = new XataClient();
   return instance;
 };
+
+export const xata = new XataClient();
