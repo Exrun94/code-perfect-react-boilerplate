@@ -25,5 +25,12 @@ module.exports = {
       'error',
       { props: true, ignorePropertyModificationsFor: ['state'] },
     ],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unamedComponents: 'function-expression',
+      },
+    ],
   },
 };
