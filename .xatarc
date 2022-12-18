@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Georgi-s-workspace-p4a5rb.eu-west-1.xata.sh/db/Playtest",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

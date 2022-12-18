@@ -1,14 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import HomePage from './pages/homepage';
 
-function App() {
+const queryClient = new QueryClient();
+
+const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<h1>Homepage works</h1>} />
-        <Route path="*" element={<h1>Page not found</h1>} />
-      </Routes>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<h1>Page not found</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
-}
+};
 
 export default App;
